@@ -31,8 +31,8 @@ function Navbar() {
     <ul
       className={
         isMobile
-          ? "mt-4"
-          : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter chlid:leading-[56px]"
+          ? "mt-4 font-dana"
+          : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter chlid:leading-[56px] font-dana"
       }
     >
       <li>
@@ -56,16 +56,10 @@ function Navbar() {
 
   const renderUserIcons = () => (
     <div dir="rtl" className="text-white flex gap-x-2 items-center">
-      <span
-        style={{ backgroundColor: "#331603" }}
-        className="rounded-full flex items-center justify-center w-9 h-9"
-      >
+      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
         <Image src={userIcon} alt="User" width={20} height={20} />
       </span>
-      <span
-        style={{ backgroundColor: "#331603" }}
-        className="bg-zinc-900 rounded-full flex items-center justify-center w-9 h-9"
-      >
+      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
         <Image src={cartIcon} alt="Cart" width={25} height={25} />
       </span>
     </div>
@@ -95,10 +89,7 @@ function Navbar() {
         </div>
       </header>
 
-      <div
-        style={{ backgroundColor: "#efeff1" }}
-        className="flex md:hidden items-center justify-between bg-white m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl"
-      >
+      <div className="flex md:hidden items-center justify-between bg-[#efeff1] m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl">
         <div className="text-zinc-900 dark:text-white">
           <Image src={menuIcon} alt="Menu" width={26} height={26} />
         </div>

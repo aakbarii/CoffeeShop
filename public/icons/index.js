@@ -8,6 +8,10 @@ import userIcon from "./user.svg";
 import cartIcon from "./cart.svg";
 import searchIcon from "./search.svg";
 import menuIcon from "./bars.svg";
+import waiteCoffeeIcon from "./waiteCoffeeIcon.svg";
+import checkboxIcon from "./cheakBox.svg";
+import questionIcon from "./question.svg";
+import calendarIcon from "./calendar.svg";
 
 export {
   homeIcon,
@@ -20,4 +24,8 @@ export {
   cartIcon,
   searchIcon,
   menuIcon,
+  waiteCoffeeIcon,
+  checkboxIcon,
+  questionIcon,
+  calendarIcon,
 };
