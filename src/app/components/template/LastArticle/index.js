@@ -64,7 +64,7 @@ function LastArticle() {
             />
           </div>
           <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
+            <h5 className="my-2 text-[15px] font-bold text-gray-900">
               رویداد رونمایی از سرفیس‌ها در تاریخ ه...
             </h5>
             <p className="mb-5 text-[13px] font-light text-gray-700">
@@ -100,7 +100,7 @@ function LastArticle() {
             />
           </div>
           <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
+            <h5 className="my-2 text-[15px] font-bold text-gray-900">
               رویداد رونمایی از سرفیس‌ها در تاریخ ه...
             </h5>
             <p className="mb-5 text-[13px] font-light text-gray-700">
@@ -136,7 +136,7 @@ function LastArticle() {
             />
           </div>
           <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
+            <h5 className="my-2 text-[15px] font-bold text-gray-900">
               رویداد رونمایی از سرفیس‌ها در تاریخ ه...
             </h5>
             <p className="mb-5 text-[13px] font-light text-gray-700">
@@ -172,7 +172,7 @@ function LastArticle() {
             />
           </div>
           <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
+            <h5 className="my-2 text-[15px] font-bold text-gray-900">
               رویداد رونمایی از سرفیس‌ها در تاریخ ه...
             </h5>
             <p className="mb-5 text-[13px] font-light text-gray-700">

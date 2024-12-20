@@ -1,3 +1,32 @@
+* {
+  @apply font-dana;
+}
+
+.range-slider__thumb {
+  background-color: #087c54 !important; /* تغییر رنگ دستگیره */
+  width: 12px !important; /* عرض دایره */
+  height: 12px !important; /* ارتفاع دایره */
+  border-radius: 50% !important; /* گرد کردن دایره */
+}
+
+.range-slider__track {
+  height: 4px !important; /* نازک کردن خط */
+  background-color: #ccc !important; /* رنگ پیش‌زمینه خط */
+}
+
+.range-slider__track--active {
+  background-color: #087c54 !important; /* رنگ بخش فعال */
+}
+
+.range-slider__range {
+  background-color: #087c54 !important; /* رنگ بخش پس زمینه */
+  height: 5px !important;
+}
+
+.range-slider {
+  height: 5px !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

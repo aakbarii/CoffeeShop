@@ -19,11 +19,12 @@ import {
 
 // آیکون‌ها
 const navItems = [
-  { name: "فروشگاه", icon: shopIcon },
-  { name: "سفارش قهوه", icon: coffeeIcon },
-  { name: "وبلاگ", icon: articleIcon },
-  { name: "درباره ما", icon: infoIcon },
-  { name: "تماس با ما", icon: phoneIcon },
+  { name: "صفحه اصلی", icon: homeIcon, path: "/" },
+  { name: "فروشگاه", icon: shopIcon, path: "/shop" },
+  { name: "سفارش قهوه", icon: coffeeIcon, path: "" },
+  { name: "وبلاگ", icon: articleIcon, path: "" },
+  { name: "درباره ما", icon: infoIcon, path: "" },
+  { name: "تماس با ما", icon: phoneIcon, path: "" },
 ];
 
 function Navbar() {
@@ -35,17 +36,17 @@ function Navbar() {
           : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter chlid:leading-[56px] font-dana"
       }
     >
-      <li>
+      {/* <li>
         <span className="flex gap-x-1 items-center text-emerald-600">
           <Image src={homeIcon} alt="Home" width={20} height={20} />
           <p>صفحه اصلی</p>
         </span>
-      </li>
+      </li> */}
       {navItems.map((item, index) => (
         <li key={index}>
           <span className="flex gap-x-1 items-center">
             <Image src={item.icon} alt={item.name} width={20} height={20} />
-            <Link className="text-black" href="#">
+            <Link className="text-black" href={item.path}>
               {item.name}
             </Link>
           </span>
