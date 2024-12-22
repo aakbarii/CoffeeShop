@@ -5,9 +5,9 @@ function SpecialCard({ product }) {
   return (
     <div className="container">
       <div className="w-[304px] h-[347px] mx-auto rounded-3xl mt-12 bg-gray-100">
-        <div className="pt-2">
+        <div className="pt-3">
           {product.takhfif && (
-            <span className="bg-white text-emerald-700 text-sm font-medium RokhBold px-2 py-2 mr-5 rounded-xl">
+            <span className="bg-white text-emerald-700 text-sm font-medium p-2 mr-5 rounded-xl">
               {product.takhfif}
             </span>
           )}

@@ -4,7 +4,7 @@ import ShopProductList from "../components/template/ShopProductList"
 
 function page() {
   return (
-    <div className="bg-[#f8f4fc] ">
+    <div className="bg-gray-200">
       <div className="container flex mx-auto pt-32 p-4">
         <FilterBox />
         <ShopProductList />

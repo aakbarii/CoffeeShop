@@ -7,7 +7,7 @@ function index() {
   const [sortOption, setSortOption] = useState("مرتب سازی بر اساس...");
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-200 min-h-screen">
       {/* Top bar */}
       <div className="bg-white shadow p-3 py-2 flex justify-between items-center rounded-xl">
         <h1 className="text-xl font-bold">فروشگاه</h1>

@@ -22,7 +22,7 @@ const navItems = [
   { name: "صفحه اصلی", icon: homeIcon, path: "/" },
   { name: "فروشگاه", icon: shopIcon, path: "/shop" },
   { name: "سفارش قهوه", icon: coffeeIcon, path: "" },
-  { name: "وبلاگ", icon: articleIcon, path: "" },
+  { name: "وبلاگ", icon: articleIcon, path: "/blog" },
   { name: "درباره ما", icon: infoIcon, path: "" },
   { name: "تماس با ما", icon: phoneIcon, path: "" },
 ];
@@ -36,12 +36,6 @@ function Navbar() {
           : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter chlid:leading-[56px] font-dana"
       }
     >
-      {/* <li>
-        <span className="flex gap-x-1 items-center text-emerald-600">
-          <Image src={homeIcon} alt="Home" width={20} height={20} />
-          <p>صفحه اصلی</p>
-        </span>
-      </li> */}
       {navItems.map((item, index) => (
         <li key={index}>
           <span className="flex gap-x-1 items-center">
@@ -95,8 +89,8 @@ function Navbar() {
           <Image src={menuIcon} alt="Menu" width={26} height={26} />
         </div>
         <HomeDrawer renderNavItems={renderNavItems(true)} />
-        <div className="flex items-center text-center content-center w-[100px] h-10 mr-16">
-          <Image src={appLogo} alt="App Logo" width={100} height={100} />
+        <div className="flex items-center text-center w-24 h-10">
+          <Image src={appLogo} alt="App Logo" width={50} height={50} />
         </div>
         {renderUserIcons(21)}
       </div>
