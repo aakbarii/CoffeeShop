@@ -11,6 +11,10 @@ import arrowImg from "./svg-image-28.svg";
 import coffeeMashinImg from "./svg-image-29.svg";
 import coffeeImg from "./svg-image-30.svg";
 import postImg from "./post-1.jpg";
+import instagramImg from "./blog-banner-2-1.png"
+import callToUsImg from "./CallToUs.png"
+import aboutUsImg from "./aboutUsImg.png"
+import costomImg from "./costomImg.jpg"
 
 export {
   appLogo,
@@ -25,5 +29,9 @@ export {
   coffeeImg,
   plantsImg,
   plantImg,
-  postImg
+  postImg,
+  instagramImg,
+  callToUsImg,
+  aboutUsImg,
+  costomImg
 };

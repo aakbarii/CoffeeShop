@@ -21,10 +21,10 @@ import {
 const navItems = [
   { name: "صفحه اصلی", icon: homeIcon, path: "/" },
   { name: "فروشگاه", icon: shopIcon, path: "/shop" },
-  { name: "سفارش قهوه", icon: coffeeIcon, path: "" },
+  { name: "سفارش قهوه", icon: coffeeIcon, path: "/costom" },
   { name: "وبلاگ", icon: articleIcon, path: "/blog" },
-  { name: "درباره ما", icon: infoIcon, path: "" },
-  { name: "تماس با ما", icon: phoneIcon, path: "" },
+  { name: "درباره ما", icon: infoIcon, path: "/about-us" },
+  { name: "تماس با ما", icon: phoneIcon, path: "/call-to-us" },
 ];
 
 function Navbar() {

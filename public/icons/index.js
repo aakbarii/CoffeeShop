@@ -12,6 +12,13 @@ import waiteCoffeeIcon from "./waiteCoffeeIcon.svg";
 import checkboxIcon from "./cheakBox.svg";
 import questionIcon from "./question.svg";
 import calendarIcon from "./calendar.svg";
+import honarIcon from "./honar.svg";
+import montakhabIcon from "./montakhab.svg";
+import boxIcon from "./box.svg";
+import ketabIcon from "./ketab.svg";
+import sabkIcon from "./sabk.svg";
+import gameIcon from "./game.svg";
+import elmIcon from "./elm.svg";
 
 export {
   homeIcon,
@@ -28,4 +35,11 @@ export {
   checkboxIcon,
   questionIcon,
   calendarIcon,
+  honarIcon,
+  montakhabIcon,
+  boxIcon,
+  ketabIcon,
+  sabkIcon,
+  gameIcon,
+  elmIcon,
 };

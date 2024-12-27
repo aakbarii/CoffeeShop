@@ -1,15 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import {
+  boxIcon,
+  elmIcon,
+  gameIcon,
+  honarIcon,
+  ketabIcon,
+  montakhabIcon,
+  sabkIcon,
+} from "../../../../../public/icons";
 
 const CategoryBox = () => {
   const categories = [
-    { id: 1, name: "هنر و سینما", icon: "🎭" },
-    { id: 2, name: "منتخب سردبیر", icon: "🖋" },
-    { id: 3, name: "کتاب و ادبیات", icon: "📖" },
-    { id: 4, name: "علم و تکنولوژی", icon: "🌐" },
-    { id: 5, name: "سبک زندگی", icon: "🏞" },
-    { id: 6, name: "بازی ویدئویی", icon: "🎮" },
-    { id: 7, name: "آن‌باکس محصولات", icon: "📦" },
+    { id: 1, name: "هنر و سینما", icon: honarIcon },
+    { id: 2, name: "منتخب سردبیر", icon: montakhabIcon },
+    { id: 3, name: "کتاب و ادبیات", icon: boxIcon },
+    { id: 4, name: "علم و تکنولوژی", icon: ketabIcon },
+    { id: 5, name: "سبک زندگی", icon: sabkIcon },
+    { id: 6, name: "بازی ویدئویی", icon: gameIcon },
+    { id: 7, name: "آن‌باکس محصولات", icon: elmIcon },
   ];
 
   return (
@@ -18,10 +27,10 @@ const CategoryBox = () => {
         {categories.map((category) => (
           <li
             key={category.id}
-            className="flex items-center justify-between text-gray-700 hover:text-gray-900"
+            className="flex items-center justify-between text-gray-700 hover:text-gray-900 h-8"
           >
             <span className="flex items-center gap-2">
-              <span className="text-lg">{category.icon}</span>
+              <Image alt={category.name} src={category.icon} />
               <span className="text-sm font-medium">{category.name}</span>
             </span>
           </li>
