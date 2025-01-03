@@ -71,7 +71,7 @@ const SpecialSlider = async () => {
   ];
 
   return (
-    <div className="mx-24">
+    <div className="container mx-auto">
       {/* Title */}
       <div className="mt-24 flex justify-center items-center">
         <div className="flex items-center content-center">

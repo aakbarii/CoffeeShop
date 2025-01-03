@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["halochin.ir"], 
+    domains: ["halochin.ir" , 'upload.wikimedia.org'], 
   },
 };
 

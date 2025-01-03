@@ -32,25 +32,23 @@ function Navbar() {
     <ul
       className={
         isMobile
-          ? "mt-4 font-dana"
-          : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter chlid:leading-[56px] font-dana"
+          ? "mt-4 font-dana flex flex-col items-start gap-y-4 text-lg"
+          : "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter child:leading-[56px] font-dana"
       }
     >
       {navItems.map((item, index) => (
-        <li key={index}>
-          <span className="flex gap-x-1 items-center">
-            <Image src={item.icon} alt={item.name} width={20} height={20} />
-            <Link className="text-black" href={item.path}>
-              {item.name}
-            </Link>
-          </span>
+        <li key={index} className="flex items-center gap-x-2">
+          <Image src={item.icon} alt={item.name} width={20} height={20} />
+          <Link className="text-black" href={item.path}>
+            {item.name}
+          </Link>
         </li>
       ))}
     </ul>
   );
 
   const renderUserIcons = () => (
-    <div dir="rtl" className="text-white flex gap-x-2 items-center">
+    <div dir="rtl" className="text-white flex gap-x-3 items-center">
       <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
         <Image src={userIcon} alt="User" width={20} height={20} />
       </span>
@@ -92,7 +90,7 @@ function Navbar() {
         <div className="flex items-center text-center w-24 h-10">
           <Image src={appLogo} alt="App Logo" width={50} height={50} />
         </div>
-        {renderUserIcons(21)}
+        {renderUserIcons()}
       </div>
     </>
   );
