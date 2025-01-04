@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { postImg } from "../../../../../public/image";
+import { postImg } from "../../../public/image";
 
 const PostComponent = () => {
   const posts = [

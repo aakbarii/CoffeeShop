@@ -8,7 +8,7 @@ import {
   ketabIcon,
   montakhabIcon,
   sabkIcon,
-} from "../../../../../public/icons";
+} from "../../../public/icons";
 
 const CategoryBox = () => {
   const categories = [

@@ -3,8 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 // Importing icon images
-import { shopIcon, waiteCoffeeIcon } from "../../../../../public/icons";
-import { hero, hero_2, hero_3 } from "../../../../../public/image";
+import { shopIcon, waiteCoffeeIcon } from "../../../public/icons";
+import { hero, hero_2, hero_3 } from "../../../public/image";
 
 function HeroSection() {
   const [image, setImage] = useState(hero);

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { callToUsImg } from "../../../public/image";
-import CardContact from "../components/Module/CardContact";
-import CriticismForm from "../components/template/CallToUS/CriticismForm";
-import Map from "../components/template/CallToUS/Map";
-import Accordions from "../components/template/CallToUS/Accordions";
+import CardContact from "../../../components/Module/CardContact";
+import CriticismForm from "../../../components/template/CallToUS/CriticismForm";
+import Map from "../../../components/template/CallToUS/Map";
+import Accordions from "../../../components/template/CallToUS/Accordions";
 
 function Page() {
   const data = [

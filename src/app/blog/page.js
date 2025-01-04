@@ -1,6 +1,6 @@
 import React from "react";
-import PostBlog from "../components/template/PostBlog";
-import CategoryBox from "../components/Module/CategoryBox";
+import PostBlog from "../../../components/template/PostBlog";
+import CategoryBox from "../../../components/Module/CategoryBox";
 import Image from "next/image";
 import { calendarIcon } from "../../../public/icons";
 import { instagramImg, postImg } from "../../../public/image";

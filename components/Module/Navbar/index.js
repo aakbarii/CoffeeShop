@@ -3,7 +3,7 @@ import Link from "next/link";
 import HomeDrawer from "../Drawer/HomeDrawer";
 
 // تصاویر
-import { appLogo } from "../../../../../public/image";
+import { appLogo } from "../../../public/image";
 import {
   homeIcon,
   shopIcon,
@@ -15,7 +15,7 @@ import {
   cartIcon,
   searchIcon,
   menuIcon,
-} from "../../../../../public/icons";
+} from "../../../public/icons";
 
 // آیکون‌ها
 const navItems = [

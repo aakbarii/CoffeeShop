@@ -7,8 +7,8 @@ import {
   checkboxIcon,
   questionIcon,
   shopIcon,
-} from "../../../../../public/icons";
-import { coffe, coffe_2 } from "../../../../../public/image";
+} from "../../../public/icons";
+import { coffe, coffe_2 } from "../../../public/image";
 
 function AboutShop() {
   return (
