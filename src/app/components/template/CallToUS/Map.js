@@ -1,11 +1,7 @@
-"use client";
-import { MapContainer, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-
 const Map = () => {
   return (
     <div className="w-full h-[420px] rounded-xl">
-      <MapContainer
+      {/* <MapContainer
         center={[35.6892, 51.389]}
         zoom={12}
         scrollWheelZoom={false}
@@ -15,7 +11,7 @@ const Map = () => {
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
         />
-      </MapContainer>
+      </MapContainer> */}
     </div>
   );
 };

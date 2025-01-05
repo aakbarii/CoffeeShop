@@ -9,7 +9,7 @@ import {
   costomImg,
   sunImg,
 } from "../../../public/image";
-import CoffeeSelection from "../../../components/template/CoustomCoffe/CoffeeSelection";
+import CoffeeSelection from "../components/template/CoustomCoffe/CoffeeSelection";
 
 function index() {
   return (

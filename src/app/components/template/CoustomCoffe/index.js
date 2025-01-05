@@ -6,7 +6,7 @@ import {
   coffeeImg,
   plantsImg,
   plantImg,
-} from "../../../public/image";
+} from "../../../../../public/image";
 
 function CoustomCoffe() {
   return (

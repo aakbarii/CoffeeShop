@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import db from "../../../db.json";
 import SpecialCard from "../../Module/SpecialCard";
 
-function index() {
+function Index() {
   const [sortOption, setSortOption] = useState("مرتب سازی بر اساس...");
 
   return (
@@ -41,4 +41,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

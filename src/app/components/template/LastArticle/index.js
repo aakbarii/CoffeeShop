@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // Import local images
-import { postImg } from "../../../public/image";
+import { postImg } from "../../../../../public/image";
 import { calendarIcon } from "@/../public/icons";
 
 function LastArticle() {
