@@ -1,6 +1,6 @@
 import React from "react";
-import FilterBox from "../components/Module/FilterBox";
-import ShopProductList from "../components/template/ShopProductList"
+import FilterBox from "../../components/Module/FilterBox";
+import ShopProductList from "../../components/template/ShopProductList"
 
 function page() {
   return (

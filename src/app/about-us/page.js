@@ -3,7 +3,7 @@ import React from "react";
 import { aboutUsImg } from "../../../public/image";
 import Link from "next/link";
 import { questionIcon } from "../../../public/icons";
-import CostomLayout from "../components/template/AboutUs/costomLayout";
+import CostomLayout from "../../components/template/AboutUs/costomLayout";
 
 function page() {
   return (

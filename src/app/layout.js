@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import Navbar from "./components/Module/Navbar";
+import Navbar from "@/components/Module/Navbar";
 
 const Dana = localFont({
   src: [
