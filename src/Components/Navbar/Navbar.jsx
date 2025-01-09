@@ -7,9 +7,6 @@ import { NavLink } from "react-router-dom";
 import { appLogo } from "../../assets/image";
 
 // Icons
-import { FaBars, FaRegUser } from "react-icons/fa6";
-import { CiShoppingBasket, CiSearch } from "react-icons/ci";
-import { BiHomeAlt2 } from "react-icons/bi";
 import {
   homeIcon,
   shopIcon,
@@ -49,19 +46,13 @@ function Navbar() {
     </ul>
   );
 
-  const renderUserIcons = (size = 22) => (
+  const renderUserIcons = () => (
     <div dir="rtl" className="text-white flex gap-x-2 items-center">
-      <span
-        style={{ backgroundColor: "#331603" }}
-        className="rounded-full flex items-center justify-center w-9 h-9"
-      >
-        <FaRegUser size={size} />
+      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
+        <img src={userIcon} className="size-5" />
       </span>
-      <span
-        style={{ backgroundColor: "#331603" }}
-        className="bg-zinc-900 rounded-full flex items-center justify-center w-9 h-9"
-      >
-        <CiShoppingBasket size={size} />
+      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
+        <img src={cartIcon} className="size-7" />
       </span>
     </div>
   );
@@ -69,10 +60,7 @@ function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <header
-        style={{ backgroundColor: "#efeff1" }}
-        className="container m-auto absolute top-5 right-0 left-0 md:flex lg:flex hidden items-center md:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl"
-      >
+      <header className="container m-auto absolute top-5 right-0 left-0 md:flex lg:flex hidden items-center md:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl bg-[#efeff1]">
         <div className="flex w-full items-center justify-between">
           <nav className="flex lg:gap-x-9 gap-x-5 items-center h-14 delay-75">
             <div className="shrink-0">
@@ -87,7 +75,7 @@ function Navbar() {
               className="rounded-r-3xl p-2 px-12"
             />
             <span className="rounded-l-3xl bg-white p-2">
-              <CiSearch size={24} />
+              <img className="size-6" src={searchIcon} width={24} height={24} />
             </span>
           </div>
           {renderUserIcons()}
@@ -95,15 +83,12 @@ function Navbar() {
       </header>
 
       {/* Mobile Navbar */}
-      <div
-        style={{ backgroundColor: "#efeff1" }}
-        className="flex md:hidden items-center justify-between bg-white m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl"
-      >
+      <div className="flex md:hidden items-center justify-between m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl bg-[#efeff1]">
         <div
           onClick={() => setOpen(true)}
           className="text-zinc-900 dark:text-white"
         >
-          <FaBars size={26} />
+          <img src={menuIcon} width={26} />
         </div>
         <Drawer
           className="bg-white text-zinc-700"
@@ -120,16 +105,12 @@ function Navbar() {
         >
           <div dir="rtl" className="flex items-center">
             <input
-              style={{ backgroundColor: "#efeff1" }}
               type="text"
               placeholder="جستجو..."
-              className="rounded-r-3xl p-2 px-8"
+              className="rounded-r-3xl p-2 px-8 bg-[#efeff1]"
             />
-            <span
-              style={{ backgroundColor: "#efeff1" }}
-              className="rounded-l-3xl bg-white p-2"
-            >
-              <CiSearch size={21} />
+            <span className="rounded-l-3xl p-2 bg-[#efeff1]">
+              <img className="size-5" src={searchIcon} width={20} height={20} />
             </span>
           </div>
           {renderNavItems(true)}

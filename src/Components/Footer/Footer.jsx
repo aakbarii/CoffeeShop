@@ -6,7 +6,7 @@
 function Footer() {
   return (
     <>
-      <footer className="back-image bg-[#1b1b1d] text-white">
+      <footer className="back-image bg-zinc-800 text-white">
         <div className="mx-32 pt-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-fit bg-white rounded-3xl ">
             {/* خبرنامه */}
@@ -53,93 +53,73 @@ function Footer() {
                 نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:w-4/5">
-              <div className="md:w-1">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
-                  منابع
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-6 w-full text-nowrap pr-16 pt-5 bg-cover bg-center"
+              style={{ backgroundImage: "url('/path/to/background.jpg')" }}
+            >
+              {/* خدمات مشتریان */}
+              <div>
+                <h2 className="mb-6 font-semibold text-white uppercase text-base">
+                  خدمات مشتریان
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
-                      Flowbite
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="hover:underline"
-                    >
-                      Tailwind CSS
-                    </a>
-                  </li>
+                <ul className="text-white font-medium">
+                  <li className="mb-4">باشگاه مشتریان</li>
+                  <li className="mb-4">همکاری در فروش</li>
+                  <li className="mb-4">تخفیف‌ها</li>
+                  <li className="mb-4">فرصت‌های شغلی</li>
+                  <li className="mb-4">مرجوع کالا</li>
+                  <li>سوالات متداول</li>
                 </ul>
               </div>
-              <div className="md:w-1">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
-                  منابع
+
+              {/* لینک‌های مفید */}
+              <div>
+                <h2 className="mb-6 font-semibold text-white uppercase  text-base">
+                  لینک‌های مفید
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
-                      Flowbite
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="hover:underline"
-                    >
-                      Tailwind CSS
-                    </a>
-                  </li>
+                <ul className="text-white font-medium">
+                  <li className="mb-4">صفحه اصلی</li>
+                  <li className="mb-4">سفارش قهوه</li>
+                  <li className="mb-4">درباره ما</li>
+                  <li className="mb-4">فروشگاه ما</li>
+                  <li className="mb-4">آخرین مقالات</li>
+                  <li>ارتباط با ما</li>
                 </ul>
               </div>
-              <div className="md:w-1">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
-                  ما را دنبال کنید
+
+              {/* راه‌های ارتباطی */}
+              <div>
+                <h2 className="mb-6 font-semibold text-white uppercase  text-base">
+                  راه‌های ارتباطی
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
-                      className="hover:underline "
-                    >
-                      Github
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
-                      Discord
-                    </a>
-                  </li>
+                <ul className="text-white font-medium">
+                  <li className="mb-4">035 - 12345687</li>
+                  <li className="mb-4">09123456789</li>
+                  <li className="mb-4">Info@yoursite.com</li>
+                  <li className="text-wrap">تهران، خیابان طراحان سایت، کوچه خوبان پ.22</li>
                 </ul>
               </div>
-              <div className="md:w-1">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  حقوقی
+
+              {/* نماد اعتماد */}
+              <div>
+                <h2 className="mb-6 font-semibold text-white uppercase  text-base">
+                  نماد اعتماد
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      سیاست
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:underline">
-                      شرایط
-                    </a>
-                  </li>
-                </ul>
+                <div className="flex space-x-4">
+                  <div className="p-4 size-52 rounded-md text-center">
+                    <img src="https://cdn.zarinpal.com/badges/trustLogo/1.svg" alt="" />
+                  </div>
+                  <div className="p-4 size-52 rounded-md text-center">
+                    <img src="https://labkhand.shop/wp-content/uploads/2022/11/enamad_icon_text_color_blue_1024-400x400.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <span className="text-sm text-gray-500 sm:text-center ">
               تمامی حقوق مادی و معنوی این سایت متعلق به سایت قهوه می باشد
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">

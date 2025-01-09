@@ -11,11 +11,8 @@ function LastArticle() {
       </div>
 
       {/* Card */}
-      <div className="grid grid-cols-4 mx-24 mb-52 ">
-        <div
-          style={{ backgroundColor: "#efeff1" }}
-          className="w-[300px] h-[356px]  rounded-3xl"
-        >
+      <div className="grid grid-cols-4 mx-24 mb-10">
+        <div className="w-[300px] h-[356px] rounded-3xl bg-[#efeff1]">
           <div className="flex justify-center items-center pt-3 pb-2">
             <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
           </div>
@@ -63,10 +60,7 @@ function LastArticle() {
           </div>
         </div>
 
-        <div
-          style={{ backgroundColor: "#efeff1" }}
-          className="w-[300px] h-[356px]  rounded-3xl"
-        >
+        <div className="w-[300px] h-[356px] bg-[#efeff1] rounded-3xl">
           <div className="flex justify-center items-center pt-3 pb-2">
             <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
           </div>
@@ -90,10 +84,7 @@ function LastArticle() {
           </div>
         </div>
 
-        <div
-          style={{ backgroundColor: "#efeff1" }}
-          className="w-[300px] h-[356px] rounded-3xl"
-        >
+        <div className="w-[300px] h-[356px] rounded-3xl bg-[#efeff1]">
           <div className="flex justify-center items-center pt-3 pb-2">
             <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
           </div>
@@ -117,7 +108,7 @@ function LastArticle() {
           </div>
         </div>
       </div>
-      <div className="blackBg h-52"></div>
+      {/* <div className="blackBg h-52"></div> */}
     </>
   );
 }

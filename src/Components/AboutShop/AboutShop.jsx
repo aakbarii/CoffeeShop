@@ -6,10 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function AboutShop() {
   return (
-    <div
-      style={{ backgroundColor: "#1b1b1d", marginTop: "-150px" }}
-      className="h-[1780px] text-white pt-52"
-    >
+    <div className="h-[1780px] text-white pt-52 -mt-36 bg-[#1b1b1d]">
       <div className="container grid grid-cols-2 gap-8">
         {/* FristPart */}
         <div className="flex flex-col justify-center">
