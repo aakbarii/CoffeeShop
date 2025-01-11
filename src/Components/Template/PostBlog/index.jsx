@@ -49,20 +49,13 @@ const PostComponent = () => {
             index < 2 ? "lg:col-span-3 h-64" : "lg:col-span-2 h-48"
           } border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 relative`}
         >
-          <img
-            src={post.img}
-            alt={post.title}
-            layout="fill"
-            objectFit="cover"
-          />
+          <img className="object-cover h-full w-full" src={postImg} alt={post.title} />
           <div className="p-4 absolute bottom-0 bg-opacity-75 w-full">
             <div className="text-sm text-white flex justify-center gap-x-2">
-              <span>{post?.date}</span>
-              <span>{post?.comments}</span>
+              <span>📆{post.date}</span>
+              <span>💬{post.comments}</span>
             </div>
-            <h2 className="text-sm text-center text-white mb-2">
-              {post.title}
-            </h2>
+            <h2 className="text-sm text-center text-white mb-2">{post.title}</h2>
           </div>
         </div>
       ))}

@@ -21,7 +21,7 @@ const CategoryBox = () => {
   ];
 
   return (
-    <div className="w-72 h-[360px] p-4 bg-white border rounded-lg shadow-md">
+    <div className="lg:w-72 w-full h-[360px] mx-auto p-4 bg-white border rounded-lg shadow-md">
       <ul className="space-y-4">
         {categories.map((category) => (
           <li

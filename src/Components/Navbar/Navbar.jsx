@@ -1,7 +1,7 @@
 // Utilities
 import { useState } from "react";
 import { Drawer } from "antd";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // Images
 import { appLogo } from "../../assets/image";
@@ -32,7 +32,7 @@ function Navbar() {
   const renderNavItems = () => (
     <ul
       className={
-        "flex lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter child:leading-[56px] font-dana"
+        "lg:flex grid gap-y-5 lg:gap-y-0 pt-3 lg:pt-0 lg:gap-x-9 gap-x-5 text-gray-300 tracking-tighter child:leading-[56px] font-dana"
       }
     >
       {navItems.map((item, index) => (
@@ -48,12 +48,12 @@ function Navbar() {
 
   const renderUserIcons = () => (
     <div dir="rtl" className="text-white flex gap-x-2 items-center">
-      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
+      <Link to="/auth" className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
         <img src={userIcon} className="size-5" />
-      </span>
-      <span className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
+      </Link>
+      <Link to="/cart" className="rounded-full flex items-center justify-center w-9 h-9 bg-[#331603]">
         <img src={cartIcon} className="size-7" />
-      </span>
+      </Link>
     </div>
   );
 

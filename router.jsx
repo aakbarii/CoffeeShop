@@ -3,6 +3,10 @@ import Home from "./src/Pages/Home/Home";
 import Shop from "./src/Pages/Shop/Shop";
 import Costom from "./src/Pages/Costom";
 import BlogPage from "./src/Pages/Blog/Blog";
+import CallToUS from "./src/Pages/CallToUS/CallToUs";
+import AboutUs from "./src/Pages/AboutUs/AboutUs";
+import Auth from "./src/Pages/Auth";
+import Cart from "./src/Pages/Cart";
 
 const Routes = () => {
   let routes = useRoutes([
@@ -11,8 +15,10 @@ const Routes = () => {
     { path: "/costom", element: <Costom /> },
     { path: "/blog", element: <BlogPage /> },
     // { path: "/dic", element: <Dic /> },
-    // { path: "/aboutus", element: <AboutUS /> },
-    // { path: "/calltous", element: <CallToUs /> },
+    { path: "/about-us", element: <AboutUs /> },
+    { path: "/call-to-us", element: <CallToUS /> },
+    { path: "/auth", element: <Auth /> },
+    { path: "/cart", element: <Cart /> },
   ]);
   
   return routes;

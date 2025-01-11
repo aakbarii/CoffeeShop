@@ -34,97 +34,60 @@ const cardsData = [
     date: "16 مهر 1401",
     img: postImg,
   },
-  {
-    title: "رویداد رونمایی از سرفیس‌ها در تاریخ ه...",
-    description:
-      "اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد کانکتور ۳۰ پین بود و با...",
-    date: "16 مهر 1401",
-    img: postImg,
-  },
-  {
-    title: "رویداد رونمایی از سرفیس‌ها در تاریخ ه...",
-    description:
-      "اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد کانکتور ۳۰ پین بود و با...",
-    date: "16 مهر 1401",
-    img: postImg,
-  },
-  {
-    title: "رویداد رونمایی از سرفیس‌ها در تاریخ ه...",
-    description:
-      "اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد کانکتور ۳۰ پین بود و با...",
-    date: "16 مهر 1401",
-    img: postImg,
-  },
-  {
-    title: "رویداد رونمایی از سرفیس‌ها در تاریخ ه...",
-    description:
-      "اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد کانکتور ۳۰ پین بود و با...",
-    date: "16 مهر 1401",
-    img: postImg,
-  },
 ];
 
 function BlogPage() {
   return (
     <div className="bg-gray-100">
-      <div className="flex gap-x-16 pt-40 p-4 container mx-auto">
+      <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-6 pt-32">
         <CategoryBox />
-        <PostBlog />
+        <div className="flex-grow">
+          <PostBlog />
+        </div>
       </div>
 
       <div className="container mx-auto">
         {/* Title */}
-        <PlantHeder size={20} text="آخرین مقالات" />
+        <div className="text-center mt-12">
+          <PlantHeder size="text-2xl md:text-4xl" text="آخرین مقالات" />
+        </div>
 
-        <div className="grid grid-cols-4 gap-6 my-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-12">
           {cardsData.map((card, index) => (
             <div
               key={index}
-              className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl"
+              className="bg-[#efeff1] rounded-3xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="flex justify-center items-center pt-3 pb-2">
-                <img
-                  className="rounded-xl w-[281px] h-[200px]"
-                  src={card.img}
-                  alt={card.date}
-                  width={281}
-                  height={200}
-                />
-              </div>
-              <div className="px-5">
-                <h5 className="my-2 text-[15px] font-bold text-gray-900">
-                  {card.title}
-                </h5>
-                <p className="mb-5 text-[13px] font-light text-gray-700">
-                  {card.description}
-                </p>
-                <div className="flex justify-between text-sm">
-                  <div className="flex items-center gap-x-2 font-light">
-                    <img
-                      src={calendarIcon}
-                      alt="calendar"
-                      width={20}
-                      height={20}
-                    />
-                    <span>{card.date}</span>
-                  </div>
-                  <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
-                    مطالعه کنید
-                  </button>
+              <img
+                className="rounded-xl w-full h-40 object-cover"
+                src={card.img}
+                alt={card.title}
+              />
+              <h5 className="my-2 text-sm md:text-base font-bold text-gray-900">
+                {card.title}
+              </h5>
+              <p className="mb-5 text-xs md:text-sm text-gray-700">
+                {card.description}
+              </p>
+              <div className="flex justify-between items-center text-xs md:text-sm">
+                <div className="flex items-center gap-2">
+                  <img src={calendarIcon} alt="calendar" className="w-4 h-4" />
+                  <span>{card.date}</span>
                 </div>
+                <button className="px-4 py-1 text-white bg-emerald-700 rounded-2xl hover:bg-emerald-600">
+                  مطالعه کنید
+                </button>
               </div>
             </div>
           ))}
         </div>
-        <div className="bg-white shadow p-4 flex justify-center items-center rounded-xl">
-          <div className="flex items-center gap-4">
-            <button className="text-blue-500 hover:underline">۱</button>
-            <button className="text-blue-500 hover:underline">۲</button>
-            <button className="text-blue-500 hover:underline">بعدی</button>
-          </div>
-        </div>
-        <div className="flex justify-center my-5">
-          <img className="w-full" src={instagramImg} alt="instagramImg" />
+
+        <div className="hidden lg:flex justify-center my-5">
+          <img
+            className="w-full max-w-4xl"
+            src={instagramImg}
+            alt="instagramImg"
+          />
         </div>
       </div>
     </div>

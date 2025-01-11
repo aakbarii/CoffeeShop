@@ -1,4 +1,4 @@
-const PlantHeder = ({ size, text }) => {
+const PlantHeder = ({ size, text , color }) => {
   return (
     <div className="flex items-center justify-center content-center mt-16">
       <svg
@@ -18,7 +18,9 @@ const PlantHeder = ({ size, text }) => {
           fill="#007E57"
         ></path>
       </svg>
-      <h3 className={`${size} Rokh`}>{text}</h3>
+      <h3 className={`${size} Rokh`} style={{ color: color }}>
+        {text}
+      </h3>
       <svg
         className="w-10"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-"use client";
+// FilterBox.jsx
 import React, { useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
@@ -23,13 +23,14 @@ const FilterBox = () => {
   };
 
   return (
-    <div className="w-80 px-4 rounded-lg font-dana sticky">
+    <div className="bg-white w-full lg:w-80 p-4 rounded-lg shadow-md mt-10">
+      {/* جستجو */}
       <input
         type="text"
         placeholder="جستجو کنید"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full p-2 mb-4 rounded-lg"
+        className="w-full p-2 mb-4 rounded-lg border border-gray-300"
       />
       <button
         className="w-full p-2 mb-4 text-white bg-[#087c54] rounded-lg hover:bg-emerald-700 transition-all"
@@ -37,7 +38,9 @@ const FilterBox = () => {
       >
         جستجو کنید
       </button>
-      <div className="bg-white p-3 rounded-lg mb-4">
+
+      {/* فیلتر قیمت */}
+      <div className="bg-gray-100 p-3 rounded-lg mb-4">
         <h3 className="py-2 pb-5">فیلتر قیمت</h3>
         <RangeSlider
           min={0}
@@ -50,6 +53,8 @@ const FilterBox = () => {
           {priceRange[0]} تومان - {priceRange[1]} تومان
         </span>
       </div>
+
+      {/* فیلتر نوع و اسم محصول */}
       <select
         value={productType}
         onChange={(e) => setProductType(e.target.value)}
@@ -68,6 +73,8 @@ const FilterBox = () => {
         <option value="name1">اسم 1</option>
         <option value="name2">اسم 2</option>
       </select>
+
+      {/* دکمه اعمال فیلتر */}
       <button
         className="w-full p-2 text-white bg-[#087c54] rounded-lg hover:bg-emerald-700 transition-all"
         onClick={handleApplyFilters}

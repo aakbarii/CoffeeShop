@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "antd": "^5.15.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.0.1",
+    "react-leaflet": "^5.0.0",
     "react-range-slider-input": "^3.0.7",
     "react-router-dom": "^6.22.3",
     "swiper": "^11.1.15"

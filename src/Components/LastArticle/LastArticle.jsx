@@ -1,114 +1,87 @@
 import { calendarIcon } from "../../assets/icons";
 import { postImg } from "../../assets/image";
 import PlantHeder from "../Module/PlantHeder";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 function LastArticle() {
   return (
     <>
-      {/* Title */}
-      <div className="flex justify-center items-center content-center text-center mb-10 text-4xl">
-        <PlantHeder size={20} text="آخرین مقالات" />
+      {/* عنوان */}
+      <div className="flex justify-center items-center content-center text-center mb-16 text-2xl md:text-4xl">
+        <PlantHeder size="text-2xl md:text-4xl" text="آخرین مقالات" />
       </div>
 
-      {/* Card */}
-      <div className="grid grid-cols-4 mx-24 mb-10">
-        <div className="w-[300px] h-[356px] rounded-3xl bg-[#efeff1]">
-          <div className="flex justify-center items-center pt-3 pb-2">
-            <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
-          </div>
-          <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
-              رویداد رونمایی از سرفیس‌ها در تاریخ ه...
-            </h5>
-            <p className="mb-5 text-[13px] font-light text-gray-700 ">
-              اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد
-              کانکتور ۳۰ پین بود و با...
-            </p>
-            <div className="flex justify-between text-sm">
-              <div className="flex items-center gap-x-2 font-light">
-                <img src={calendarIcon} alt="calendar" width={20} height={20} />
-                <span>16 مهر 1401</span>
+      {/* اسلایدر کارت‌ها */}
+      <Swiper
+        spaceBetween={20} // فاصله بین اسلایدها
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay]}
+        breakpoints={{
+          1200: {
+            slidesPerView: 4, // تعداد کارت‌ها برای دسکتاپ
+          },
+          992: {
+            slidesPerView: 3, // تعداد کارت‌ها برای تبلت
+          },
+          768: {
+            slidesPerView: 2, // تعداد کارت‌ها برای موبایل‌های بزرگ
+          },
+          0: {
+            slidesPerView: 1, // تعداد کارت‌ها برای موبایل‌های کوچک
+          },
+        }}
+        className="mx-4 md:mx-24"
+      >
+        {[...Array(4)].map((_, index) => (
+          <SwiperSlide key={index}>
+            <div className="w-full h-auto md:w-[300px] md:h-[356px] rounded-3xl bg-[#efeff1] pb-3 mb-10">
+              {/* تصویر */}
+              <div className="flex justify-center items-center pt-3 pb-2">
+                <img
+                  className="rounded-xl w-full md:w-[281px] h-[200px]"
+                  src={postImg}
+                  alt="Post"
+                />
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
-                مطالعه کنید
-              </button>
-            </div>
-          </div>
-        </div>
 
-        <div className="w-[300px] h-[356px] rounded-3xl bg-[#efeff1]">
-          <div className="flex justify-center items-center pt-3 pb-2">
-            <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
-          </div>
-          <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
-              رویداد رونمایی از سرفیس‌ها در تاریخ ه...
-            </h5>
-            <p className="mb-5 text-[13px] font-light text-gray-700 ">
-              اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد
-              کانکتور ۳۰ پین بود و با...
-            </p>
-            <div className="flex justify-between text-sm">
-              <div className="flex items-center gap-x-2 font-light">
-                <img src={calendarIcon} alt="calendar" width={20} height={20} />
-                <span>16 مهر 1401</span>
+              {/* متن و اطلاعات */}
+              <div className="px-4 md:px-5">
+                <h5 className="my-2 text-sm md:text-base font-bold text-gray-900">
+                  رویداد رونمایی از سرفیس‌ها در تاریخ ه...
+                </h5>
+                <p className="mb-5 text-[11px] md:text-[13px] font-light text-gray-700">
+                  اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی،
+                  فاقد کانکتور ۳۰ پین بود و با...
+                </p>
+                <div className="flex justify-between items-center text-xs md:text-sm">
+                  <div className="flex items-center gap-x-2 font-light">
+                    <img
+                      src={calendarIcon}
+                      alt="calendar"
+                      width={20}
+                      height={20}
+                    />
+                    <span>16 مهر 1401</span>
+                  </div>
+                  <button className="px-4 py-1.5 text-xs md:text-sm text-center text-white bg-emerald-700 rounded-2xl">
+                    مطالعه کنید
+                  </button>
+                </div>
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
-                مطالعه کنید
-              </button>
             </div>
-          </div>
-        </div>
-
-        <div className="w-[300px] h-[356px] bg-[#efeff1] rounded-3xl">
-          <div className="flex justify-center items-center pt-3 pb-2">
-            <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
-          </div>
-          <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
-              رویداد رونمایی از سرفیس‌ها در تاریخ ه...
-            </h5>
-            <p className="mb-5 text-[13px] font-light text-gray-700 ">
-              اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد
-              کانکتور ۳۰ پین بود و با...
-            </p>
-            <div className="flex justify-between text-sm">
-              <div className="flex items-center gap-x-2 font-light">
-                <img src={calendarIcon} alt="calendar" width={20} height={20} />
-                <span>16 مهر 1401</span>
-              </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
-                مطالعه کنید
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[300px] h-[356px] rounded-3xl bg-[#efeff1]">
-          <div className="flex justify-center items-center pt-3 pb-2">
-            <img className="rounded-xl w-[281px] h-[200px]" src={postImg} />
-          </div>
-          <div className="px-5">
-            <h5 className="my-2 text-base font-bold text-gray-900">
-              رویداد رونمایی از سرفیس‌ها در تاریخ ه...
-            </h5>
-            <p className="mb-5 text-[13px] font-light text-gray-700 ">
-              اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی، فاقد
-              کانکتور ۳۰ پین بود و با...
-            </p>
-            <div className="flex justify-between text-sm">
-              <div className="flex items-center gap-x-2 font-light">
-                <img src={calendarIcon} alt="calendar" width={20} height={20} />
-                <span>16 مهر 1401</span>
-              </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
-                مطالعه کنید
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <div className="blackBg h-52"></div> */}
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
   );
 }
