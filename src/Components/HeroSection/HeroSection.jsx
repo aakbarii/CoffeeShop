@@ -10,10 +10,10 @@ function HeroSection() {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-8 mt-36 mr-8 relative">
+    <div className="grid md:grid-cols-2 gap-8 mt-36 mx-8 relative">
       <div className="md:mt-24 md:mr-16">
         <h4 className="md:text-4xl text-2xl">آنلاین شاپ تخصصی</h4>
-        <h1 className="RokhBold md:text-5xl text-3xl pt-2 pb-4 w-full">
+        <h1 className="RokhBold md:text-5xl text-[28px] pt-2 pb-4 w-full">
           انواع قـهوه و لـوازم کافـی شاپ
         </h1>
         <p className="text-sm">

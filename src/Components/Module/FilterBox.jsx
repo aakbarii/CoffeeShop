@@ -23,7 +23,7 @@ const FilterBox = () => {
   };
 
   return (
-    <div className="bg-white w-full lg:w-80 p-4 rounded-lg shadow-md mt-10">
+    <div className="bg-white w-full h-[460px] lg:w-80 p-4 rounded-lg shadow-md mt-10">
       {/* جستجو */}
       <input
         type="text"

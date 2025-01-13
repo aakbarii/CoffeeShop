@@ -9,7 +9,7 @@ function page() {
     <div className="pt-40 p-4 container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-y-5">
-          <div className="flex items-center content-center">
+          <div className="flex lg:justify-start justify-center items-center content-center">
             <svg
               className="w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ function page() {
                 fill="#007E57"
               ></path>
             </svg>
-            <h3 className="text-4xl font-rokh">درباره فروشگاه ما </h3>
+            <h3 className="lg:text-[34px] text-3xl lg:text-start text-center font-rokh">درباره فروشگاه ما </h3>
             <svg
               className="w-10"
               xmlns="http://www.w3.org/2000/svg"

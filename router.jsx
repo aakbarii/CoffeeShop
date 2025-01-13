@@ -14,11 +14,11 @@ const Routes = () => {
     { path: "/shop", element: <Shop /> },
     { path: "/costom", element: <Costom /> },
     { path: "/blog", element: <BlogPage /> },
-    // { path: "/dic", element: <Dic /> },
     { path: "/about-us", element: <AboutUs /> },
     { path: "/call-to-us", element: <CallToUS /> },
     { path: "/auth", element: <Auth /> },
     { path: "/cart", element: <Cart /> },
+    // { path: "/dic", element: <Dic /> },
   ]);
   
   return routes;
