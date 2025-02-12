@@ -10,7 +10,9 @@ function Home() {
     <>
       <HeroSection />
       <BlackBox />
-      <SpecialSlider />
+      <div className="md:w-[1327px] mx-auto">
+        <SpecialSlider />
+      </div>
       <AboutShop />
       <CoustomCoffe />
       <LastArticle />

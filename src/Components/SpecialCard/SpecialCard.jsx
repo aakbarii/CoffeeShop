@@ -2,12 +2,12 @@ import cart from "../../assets/icons/cart.svg";
 
 function SpecialCard({ product }) {
   return (
-    <div className="container">
-      <div className="w-[304px] h-[347px] mx-auto rounded-3xl mt-12 bg-gray-100">
-        <div className="pt-3">
-          {product.takhfif && (
-            <span className="bg-white text-emerald-700 text-sm font-medium p-2 mr-5 rounded-xl">
-              {product.takhfif}
+    <div className="">
+      <div className="w-[304px] h-[347px] mx-auto rounded-3xl mt-12 bg-gray-100 relative">
+        <div className="absolute top-5 right-5">
+          {product.discount > 0 && (
+            <span className="p-3 py-2 bg-white text-emerald-700 text-sm font-medium rounded-xl">
+              % {product.discount}
             </span>
           )}
         </div>
@@ -21,18 +21,18 @@ function SpecialCard({ product }) {
           />
         </div>
         <div className="px-5 pb-5">
-          <h5 className="text-base text-center text-nowrap -px-5 overflow-hidden text-ellipsis whitespace-nowrap text-black">
-            {product.title}
+          <h5 className="text-base text-center -px-5 overflow-hidden text-wrap text-black">
+            {product.name}
           </h5>
           <div className="flex items-center justify-between mt-3">
             <span className="text-gray-900">
-              {product.price && (
-                <span className="text-xs deco font-thin">
-                  {Number(product.price).toLocaleString()}
+              {product.discount > 0 && (
+                <span className="text-xs text-emerald-600">
+                  {` ${product.discount} `}% تخفیف
                 </span>
               )}
               <div className="text-base font-thin">
-                {Number(product.orgprice).toLocaleString()}
+                {product.price}
                 <span className="text-xs pr-1">تومان</span>
               </div>
             </span>

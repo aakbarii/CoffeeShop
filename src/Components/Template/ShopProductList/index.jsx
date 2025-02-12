@@ -1,9 +1,25 @@
-import React, { useState } from "react";
-import db from "../../../../db.json";
 import SpecialCard from "../../SpecialCard/SpecialCard";
+import { useEffect, useState } from "react";
+import { Axios } from "../../../api/Axios";
 
 function Index() {
   const [sortOption, setSortOption] = useState("مرتب سازی بر اساس...");
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    Axios.get("/product")
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error("خطا در دریافت داده‌ها: ", error);
+      });
+  }, []);
+
+  if (!Array.isArray(products)) {
+    return <div>لطفاً مجموعه‌ای از محصولات را ارسال کنید.</div>;
+  }
 
   return (
     <div className="bg-gray-200 min-h-screen pt-10">
@@ -24,8 +40,10 @@ function Index() {
 
       {/* Products grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-        {db.Products.slice(0, 6).map((product) => (
+        {products.slice(0, 6).map((product) => (
+          <>
           <SpecialCard key={product.id} product={product} />
+          </>
         ))}
       </div>
 

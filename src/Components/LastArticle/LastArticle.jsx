@@ -4,8 +4,23 @@ import PlantHeder from "../Module/PlantHeder";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useEffect, useState } from "react";
+import { Axios } from "../../api/Axios";
 
 function LastArticle() {
+
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    Axios.get("/articles")
+      .then((response) => {
+        setArticles(response.data);
+      })
+      .catch((error) => {
+        console.error("خطا در دریافت داده‌ها: ", error);
+      });
+  }, []);
+
   return (
     <>
       {/* عنوان */}
@@ -15,7 +30,7 @@ function LastArticle() {
 
       {/* اسلایدر کارت‌ها */}
       <Swiper
-        spaceBetween={20} // فاصله بین اسلایدها
+        spaceBetween={20}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -42,22 +57,22 @@ function LastArticle() {
         }}
         className="mx-4 md:mx-24"
       >
-        {[...Array(4)].map((_, index) => (
-          <SwiperSlide key={index}>
+        {articles.slice(0 , 4).map((article) => (
+          <SwiperSlide key={article.id}>
             <div className="w-full h-auto md:w-[300px] md:h-[356px] rounded-3xl bg-[#efeff1] pb-3 mb-10">
               {/* تصویر */}
               <div className="flex justify-center items-center pt-3 pb-2">
                 <img
                   className="rounded-xl w-full md:w-[281px] h-[200px]"
-                  src={postImg}
+                  src={article.image}
                   alt="Post"
                 />
               </div>
 
               {/* متن و اطلاعات */}
               <div className="px-4 md:px-5">
-                <h5 className="my-2 text-sm md:text-base font-bold text-gray-900">
-                  رویداد رونمایی از سرفیس‌ها در تاریخ ه...
+                <h5 className="my-2 text-sm md:text-base font-bold text-ellipsis text-gray-900">
+                  {article.title}
                 </h5>
                 <p className="mb-5 text-[11px] md:text-[13px] font-light text-gray-700">
                   اپل ۱۰ سال قبل از آیفون ۵ رونمایی کرد که برخلاف نسل‌های قبلی،

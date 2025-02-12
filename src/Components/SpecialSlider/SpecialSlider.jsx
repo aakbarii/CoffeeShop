@@ -1,19 +1,32 @@
-import SpecialCard from "../SpecialCard/SpecialCard";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import db from "../../../db.json";
-import PlantHeder from "../Module/PlantHeder";
+import SpecialCard from "../SpecialCard/SpecialCard";
 import "swiper/css";
 import "swiper/css/autoplay";
+import Axios from "axios";
+import PlantHeder from "../Module/PlantHeder";
 
 function SpecialSlider() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    Axios.get("/product")
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error("خطا در دریافت داده‌ها: ", error);
+      });
+  }, []);
+
   return (
     <>
-      <div className="mx-4 md:mx-24 md:mb-0 mb-10">
+      <div className=" md:mb-0 mb-10">
         {/* عنوان */}
         <div className="flex justify-center items-center mt-16 md:mt-24 Rokh">
           <div className="flex items-center content-center text-center text-2xl md:text-5xl">
-            <PlantHeder size="text-3xl md:text-5xl" text="آخرین مقالات" />
+            <PlantHeder size="text-3xl md:text-5xl" text="فروش ویژه" />
           </div>
         </div>
 
@@ -45,7 +58,7 @@ function SpecialSlider() {
             },
           }}
         >
-          {db.Products.map((product) =>
+          {Array.isArray(products) && products.map((product) =>
             product.price ? (
               <SwiperSlide key={product.id}>
                 <SpecialCard product={product} />
